@@ -13,27 +13,37 @@
     <form action="/search" method="POST">
       <input type="text" name="search" placeholder="Search By Keyword">
       <input type="submit" value="Go">
+      <div class="spacer">
+        <h2>Meme Results</h2>
+        <h2>Gif Results</h2>
+      </div>
     </form>
     <div class="searchResults">
       <div class="meme">
-        <h2>Meme Results</h2>
+        <div class="result">
+        </div>
         <% meme.forEach((value) => { %>
           <p><%= value.urlName %></p>
           <img src="<%= value.imageUrl %>">
         <%})%>
       </div>
       <div class="gif">
-        <h2>Gif Results</h2>
+        <div class="result">
+        </div>
         <% gif.forEach((value) => { %>
           <p><%= value.slug %></p>
           <img src="<%= value.images.original.url %>">
         <%})%>
       </div>
     </div>
-     <form action="/search" method="POST">
-      <input type="hidden" value="2" name="page">
-      <input type="hidden" name="search" value="<%= searchQuery %>">
-      <input type="submit" value="2">
-    </form>
+    <div class="buttonz">
+      <% for (let i= 0; i<= 4; i++) {%>
+        <form action="/search" method="POST">
+          <input type="hidden" value="<%= i %>" name="page">
+          <input type="hidden" name="search" value="<%= searchQuery %>">
+          <input type="submit" value="<%= i+1 %>">
+        </form>
+      <%}%>
+    </div>
   </body>
 </html>
