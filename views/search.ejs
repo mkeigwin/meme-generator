@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <h1>GIF</h1>
-  <a href="/home">HOME</a>
-  <a href="/library">LIBRARY</a>
-  <form action="/home/search" method="POST">
-    <input type="text" name="search" placeholder="Search By Keyword">
-    <input type="submit" value="Go">
-  </form>
-  <div class="searchResults">
-    <div class="meme">
-      <h2>Meme Results</h2>
-      <% meme.forEach((value) => { %>
-        <p><%= value.urlName %></p>
-        <img src="<%= value.imageUrl %>">
-      <%})%>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="search.css">
+  </head>
+  <body>
+    <h1>GIF</h1>
+    <a href="/home">HOME</a>
+    <a href="/library">LIBRARY</a>
+    <form action="/search" method="POST">
+      <input type="text" name="search" placeholder="Search By Keyword">
+      <input type="submit" value="Go">
+    </form>
+    <div class="searchResults">
+      <div class="meme">
+        <h2>Meme Results</h2>
+        <% meme.forEach((value) => { %>
+          <p><%= value.urlName %></p>
+          <img src="<%= value.imageUrl %>">
+        <%})%>
+      </div>
+      <div class="gif">
+        <h2>Gif Results</h2>
+        <% gif.forEach((value) => { %>
+          <p><%= value.slug %></p>
+          <img src="<%= value.images.original.url %>">
+        <%})%>
+      </div>
     </div>
-    <div class="gif">
-      <h2>Gif Results</h2>
-      <% gif.forEach((value) => { %>
-        <p><%= value.slug %></p>
-        <img src="<%= value.images.original.url %>">
-      <%})%>
-    </div>
-  </div>
-   <form action="/home/search" method="POST">
-    <% page=2 %>
-    <input type="button" value="2">
-  </form>
-</body>
+     <form action="/search" method="POST">
+      <input type="hidden" value="2" name="page">
+      <input type="hidden" name="search" value="<%= searchQuery %>">
+      <input type="submit" value="2">
+    </form>
+  </body>
 </html>
