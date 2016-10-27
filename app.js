@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // set default templating engine
 app.set('view engine', 'ejs');
 
+
 // middleware to receive form inputs
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
