@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="search.css">
   </head>
   <body>
-    <h1>GIF</h1>
+    <h1>"<%= searchQuery %>"" search results</h1>
     <a href="/home">HOME</a>
     <a href="/library">LIBRARY</a>
     <form action="/search" method="POST">
-      <input type="text" name="search" placeholder="Search By Keyword">
+      <input type="text" name="search" placeholder="Search By Keyword" required>
+      <select name="number">
+        <option value="5">5</option>
+        <option selected="selected" value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
       <input type="submit" value="Go">
-      <div class="spacer">
-        <h2>Meme Results</h2>
-        <h2>Gif Results</h2>
-      </div>
     </form>
+    <div class="spacer">
+      <h2><%= searchQuery %> Meme's</h2>
+      <h2><%= searchQuery %> Gif's</h2>
+    </div>
     <div class="searchResults">
       <div class="meme">
         <div class="result">
@@ -40,6 +46,7 @@
       <% for (let i= 0; i<= 4; i++) {%>
         <form action="/search" method="POST">
           <input type="hidden" value="<%= i %>" name="page">
+          <input type="hidden" value="<%= numbPage %>" name="number">
           <input type="hidden" name="search" value="<%= searchQuery %>">
           <input type="submit" value="<%= i+1 %>">
         </form>

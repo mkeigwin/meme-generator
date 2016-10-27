@@ -9,6 +9,7 @@ router.post('/', searchMeme, searchGif, (req, res) => {
     meme: res.meme || [],
     gif: res.gif || [],
     searchQuery: req.body.search,
+    numbPage: req.body.number,
     // favorites: res.favorites || [],
   });
 });
