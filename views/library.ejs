@@ -4,28 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>LIBRARY</h1>
     <a href="/users/profile">HOME</a>
     <div id="favorites-container">
       <h2><%= user.username %>'s Favorites:</h2>
-      <% favorites.forEach((fave) => { %>
+      <% favorites.forEach((memeFave) => { %>
       <div class="faveMeme">
-        <p><%= fave.urlName %></p>
-        <img src="<%= fave.imageUrl %>">
-        <form action="/library/<%= fave._id %>?_method=DELETE" method="post">
+        <p><%= memeFave.urlName %></p>
+        <img src="<%= memeFave.imageUrl %>">
+        <form action="/library/<%= memeFave._id %>?_method=DELETE" method="post">
           <input type="submit" value="Delete">
         </form>
       </div>
       <% }) %>
-      <% favorites.forEach((fave) => { %>
+      <% favorites.forEach((gifFave) => { %>
       <h1>fav gif</h1>
       <div class="faveGif">
-        <p><%= fave.slug %></p>
+        <p><%= gifFave.slug %></p>
 
-        <form action="/library/<%= fave._id %>?_method=DELETE" method="post">
+        <form action="/library/<%= gifFave._id %>?_method=DELETE" method="post">
           <input type="submit" value="Delete">
         </form>
       </div>

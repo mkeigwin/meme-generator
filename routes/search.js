@@ -3,7 +3,7 @@ const router = require('express').Router();
 const { authenticate } = require('../lib/auth');
 const { searchMeme } = require('../services/meme');
 const { searchGif } = require('../services/gif');
-// const { saveFavorite } = require('../models/favorites');
+// const { getFavorite } = require('../models/favorites');
 
 // grabbing information from services page, allowing function to be accessed on router page
 router.post('/', searchMeme, searchGif, authenticate, (req, res) => {
