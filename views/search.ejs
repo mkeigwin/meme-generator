@@ -32,6 +32,9 @@
           <p><%= value.urlName %></p>
           <img src="<%= value.imageUrl %>">
           <form action="/search" method="post">
+            <input type="hidden" value="<%= numbPage %>" name="number">
+            <input type="hidden" name="search" value="<%= searchQuery %>">
+            <input type="hidden" name="page" value="<%= samePage %>">
             <input type="hidden" name="favorite[urlName]" value="<%= value.urlName %>">
             <input type="hidden" name="favorite[imageUrl]" value="<%= value.imageUrl %>">
             <input type="submit" value="SAVE">
@@ -45,10 +48,13 @@
           <p><%= value.slug %></p>
           <img src="<%= value.images.original.url %>">
           <form action="/search" method="post">
+            <input type="hidden" value="<%= numbPage %>" name="number">
+            <input type="hidden" name="search" value="<%= searchQuery %>">
+            <input type="hidden" name="page" value="<%= samePage %>">
             <input type="hidden" name="favorite[slug]" value="<%= value.slug %>">
             <input type="hidden" name="favorite[imagesoriginalurl]" value="<%= value.images.original.url %>">
             <input type="submit" value="SAVE">
-        </form>
+          </form>
         <%})%>
       </div>
     </div>

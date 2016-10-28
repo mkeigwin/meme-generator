@@ -13,6 +13,7 @@ router.post('/', searchMeme, searchGif, authenticate, (req, res) => {
     gif: res.gif || [],
     searchQuery: req.body.search,
     numbPage: req.body.number,
+    samePage: req.body.page,
     // favorites: res.favorites || [],
   });
 });

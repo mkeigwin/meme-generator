@@ -6,7 +6,6 @@ function searchMeme(req, res, next) {
   const qs = req.body.search;
   const page = req.body.page || 0;
   const number = req.body.number || 10;
-  console.log(req.body);
   fetch(`${API_URL}q=${qs}&pageIndex=${page}&pageSize=${number}`)
  .then(r => r.json())
  .then((result) => {
