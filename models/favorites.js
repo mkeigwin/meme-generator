@@ -33,16 +33,14 @@ function saveFavorite(req, res, next) {
   }
 
   // Adding userId to insertObj
-  console.log('THIS IS RECK SESH' + req.session.userId);
-  console.log('THIS IS THE INSERTOBJ ' + insertObj.favorite)
   insertObj.favorite.userId = req.session.userId;
-
+  // console.log('INSERT OBJECT ****** ', insertObj.favorite);
   MongoClient.connect(DB_CONNECTION, (err, db) => {
     if (err) return next(err);
     db.collection('favorites')
       .insert(insertObj.favorite, (insertErr, result) => {
         if (insertErr) return next(insertErr);
-        // console.log(result);
+        console.log(result);
         res.saved = result;
         db.close();
         next();

@@ -12,14 +12,16 @@
     <div id="favorites-container">
       <div class="memeFave">
       <h2><%= user.username %>'s Favorites:</h2>
-      <% favorites.forEach((favorites) => { %>
-        <p><%= favorites.urlName %></p>
-        <img src="<%= favorites.imageUrl %>">
-        <p><%= favorites.slug %></p>
-        <img src="<%= favorites.imagesoriginalurl %>">
-        <form action="/library/<%= favorites._id %>?_method=DELETE" method="post">
+      <% favorites.forEach((favorite) => { %>
+      <% if (favorite.slug || favorite.urlName) {%>
+        <p><%= favorite.urlName %></p>
+        <img src="<%= favorite.imageUrl %>">
+        <p><%= favorite.slug %></p>
+        <img src="<%= favorite.imagesoriginalurl %>">
+        <form action="/library/<%= favorite._id %>?_method=DELETE" method="post">
           <input type="submit" value="Delete">
         </form>
+        <%}%>
       <% }) %>
       </div>
 
