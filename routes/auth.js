@@ -1,8 +1,8 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 /* eslint no-param-reassign: ["error", { "props": false }] */
 
-const express           = require('express');
-const { logIn }  = require('../lib/auth');
+const express = require('express');
+const { logIn } = require('../lib/auth');
 
 // Router
 const authRouter = express.Router();

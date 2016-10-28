@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use(session({
   resave: false,
   saveUninitialized: false,
-  secret: SECRET
+  secret: SECRET,
 }));
 
 // middleware to receive form inputs
