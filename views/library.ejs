@@ -8,6 +8,23 @@
   </head>
   <body>
     <h1>LIBRARY</h1>
-    <a href="/home">HOME</a>
+    <a href="/users/profile">HOME</a>
+    <div id="favorites-container">
+      <h2><%= user.username %>'s Favorites:</h2>
+      <div class="faveMeme">
+        <p><%= favorites.urlName %></p>
+        <img src="<%= favorites.imageUrl %>">
+        <form action="/library<%= favorites._id %>?_method=DELETE" method="post">
+          <input type="submit" value="Delete">
+        </form>
+      </div>
+      <div class="faveGif">
+        <p><%= favorites.slug %></p>
+        <img src="<%= favorites.images.original.url %>">
+        <form action="/library<%= favorites._id %>?_method=DELETE" method="post">
+          <input type="submit" value="Delete">
+        </form>
+      </div>
+  </div>
   </body>
 </html>

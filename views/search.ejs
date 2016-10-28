@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>"<%= searchQuery %>"" search results</h1>
-    <a href="/home">HOME</a>
+    <a href="/users/profile">HOME</a>
     <a href="/library">LIBRARY</a>
     <form action="/search" method="POST">
       <input type="text" name="search" placeholder="Search By Keyword" required>
@@ -31,6 +31,11 @@
         <% meme.forEach((value) => { %>
           <p><%= value.urlName %></p>
           <img src="<%= value.imageUrl %>">
+          <form action="/library" method="get">
+            <input type="hidden" name="favorite[urlName]" value="<%= value.urlName %>">
+            <input type="hidden" name="favorite[imageUrl]" value="<%= value.imageUrl %>">
+            <input type="submit" value="SAVE">
+        </form>
         <%})%>
       </div>
       <div class="gif">
@@ -39,6 +44,11 @@
         <% gif.forEach((value) => { %>
           <p><%= value.slug %></p>
           <img src="<%= value.images.original.url %>">
+          <form action="/library" method="get">
+            <input type="hidden" name="favorite[slug]" value="<%= value.slug %>">
+            <input type="hidden" name="favorite[imagesoriginalurl]" value="<%= value.images.original.url %>">
+            <input type="submit" value="SAVE">
+        </form>
         <%})%>
       </div>
     </div>
