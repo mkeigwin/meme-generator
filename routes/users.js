@@ -20,7 +20,9 @@ usersRouter.post('/', createUser, (req, res) => {
  * It is "protected" by the authenticate middleware from the auth library
  */
 usersRouter.get('/profile', authenticate, (req, res) => {
-  res.render('users/profile', { user: res.user });
+  res.render('users/profile', {
+    user: res.user,
+  });
 });
 
 module.exports = usersRouter;

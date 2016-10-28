@@ -8,11 +8,14 @@
   </head>
   <body>
     <h1>INDEX</h1>
-        <header>
-      <nav>
-        <a href="/signup">Sign Up</a>
-        <a href="/login">Log In</a>
-      </nav>
-    </header>
+    <nav>
+      <h1>Login</h1>
+      <form class="" action="/auth" method="post">
+        <input type="text" name="user[username]" value="" placeholder="Username">
+        <input type="password" name="user[password]" value="" placeholder="Password">
+        <input type="submit" name="name" value="Log in">
+      </form>
+      <a href="/signup">Sign Up</a>
+    </nav>
   </body>
 </html>
