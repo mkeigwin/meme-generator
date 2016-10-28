@@ -10,8 +10,6 @@ router.get('/library', authenticate, getFavorites, (req, res) => {
   // console.log(res.favorites);
   res.render('library', {
     user: res.user,
-    // meme: res.meme || [],
-    // gif: res.gif || [],
     favorites: res.favorites || [],
   });
 });

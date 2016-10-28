@@ -26,8 +26,6 @@
     </div>
     <div class="searchResults">
       <div class="meme">
-        <div class="result">
-        </div>
         <% meme.forEach((value) => { %>
           <p><%= value.urlName %></p>
           <img src="<%= value.imageUrl %>">
@@ -38,12 +36,10 @@
             <input type="hidden" name="favorite[urlName]" value="<%= value.urlName %>">
             <input type="hidden" name="favorite[imageUrl]" value="<%= value.imageUrl %>">
             <input type="submit" value="SAVE">
-        </form>
+          </form>
         <%})%>
       </div>
       <div class="gif">
-        <div class="result">
-        </div>
         <% gif.forEach((value) => { %>
           <p><%= value.slug %></p>
           <img src="<%= value.images.original.url %>">

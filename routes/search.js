@@ -14,7 +14,6 @@ router.post('/', authenticate, searchMeme, searchGif, saveFavorite, (req, res) =
     searchQuery: req.body.search,
     numbPage: req.body.number,
     samePage: req.body.page,
-    // favorites: res.favorites || [],
   });
 });
 
