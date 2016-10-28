@@ -21,7 +21,7 @@ const { getFavorites,
 //   });
 // });
 
-router.get('/library', authenticate, saveFavorite, getFavorites, (req, res) => {
+router.get('/library', authenticate, getFavorites, (req, res) => {
   res.render('library', {
     user: res.user,
     meme: res.meme || [],
@@ -35,7 +35,7 @@ router.delete('/library/:id', deleteFavorites, (req, res) => {
 });
 
 router.post('/library', saveFavorite, (req, res) => {
-  res.redirect('/');
+  // res.redirect('/');
 });
 
 module.exports = router;
