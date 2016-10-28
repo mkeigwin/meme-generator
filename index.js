@@ -14,7 +14,7 @@ const usersRouter = require('./routes/users');
 
 // making constant variables for the routes to be referencing further down
 const app = express();
-const SECRET = 'tacos3000';
+const SECRET = 'rafaSquad';
 const PORT = process.argv[2] || process.env.PORT || 3000;
 
 // set up logging so that we can see what's happening
@@ -36,6 +36,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   secret: SECRET,
+  cookie: { maxAge: 600000 },
 }));
 
 // middleware to receive form inputs

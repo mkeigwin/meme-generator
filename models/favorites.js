@@ -21,7 +21,11 @@ function getFavorites(req, res, next) {
 
 function saveFavorite(req, res, next) {
   // creating an empty object for the insertObj
-  const insertObj = {};
+  const insertObj = {
+    favorite: {
+      userId: undefined,
+    }
+  };
 
   // copying all of req.body into insertObj
   for (key in req.body) {
@@ -29,6 +33,8 @@ function saveFavorite(req, res, next) {
   }
 
   // Adding userId to insertObj
+  console.log('THIS IS RECK SESH' + req.session.userId);
+  console.log('THIS IS THE INSERTOBJ ' + insertObj.favorite)
   insertObj.favorite.userId = req.session.userId;
 
   MongoClient.connect(DB_CONNECTION, (err, db) => {
@@ -36,6 +42,7 @@ function saveFavorite(req, res, next) {
     db.collection('favorites')
       .insert(insertObj.favorite, (insertErr, result) => {
         if (insertErr) return next(insertErr);
+        // console.log(result);
         res.saved = result;
         db.close();
         next();

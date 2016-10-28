@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <h1>Welcome! <%= user.username %></h1>
+    <h1>Welcome <%= user.username %>!</h1>
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">
     </form>

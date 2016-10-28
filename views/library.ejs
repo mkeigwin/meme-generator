@@ -10,26 +10,19 @@
     <h1>LIBRARY</h1>
     <a href="/users/profile">HOME</a>
     <div id="favorites-container">
+      <div class="memeFave">
       <h2><%= user.username %>'s Favorites:</h2>
-      <% favorites.forEach((memeFave) => { %>
-      <div class="faveMeme">
-        <p><%= memeFave.urlName %></p>
-        <img src="<%= memeFave.imageUrl %>">
-        <form action="/library/<%= memeFave._id %>?_method=DELETE" method="post">
+      <% favorites.forEach((favorites) => { %>
+        <p><%= favorites.urlName %></p>
+        <img src="<%= favorites.imageUrl %>">
+        <p><%= favorites.slug %></p>
+        <img src="<%= favorites.imagesoriginalurl %>">
+        <form action="/library/<%= favorites._id %>?_method=DELETE" method="post">
           <input type="submit" value="Delete">
         </form>
-      </div>
       <% }) %>
-      <% favorites.forEach((gifFave) => { %>
-      <h1>fav gif</h1>
-      <div class="faveGif">
-        <p><%= gifFave.slug %></p>
+      </div>
 
-        <form action="/library/<%= gifFave._id %>?_method=DELETE" method="post">
-          <input type="submit" value="Delete">
-        </form>
-      </div>
-      <% }) %>
   </div>
   </body>
 </html>
