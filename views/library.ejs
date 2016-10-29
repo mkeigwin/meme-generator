@@ -16,8 +16,7 @@
         <% favorites.forEach((favorite) => { %>
           <% if (favorite.slug || favorite.urlName) {%>
            <div class="textOutput">
-
-      <a href="<%= favorite.imageUrl %>" download>
+            <a href="<%= favorite.imageUrl %>" download>
               <img src="<%= favorite.imageUrl %>">
             </a>
             <a href="<%= favorite.imagesoriginalurl %>" download>
