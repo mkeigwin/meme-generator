@@ -5,21 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre" rel="stylesheet">
   </head>
   <body>
     <div class="main">
       <h1>Welcome To The Procrastinator</h1>
       <h2>The Worlds Best App for Generating Memes and Gifs!</h2>
       <nav>
-        <p>Login</p>
-        <form class="login" action="/auth" method="post">
-          <input type="text" name="user[username]" value="" placeholder="Username"><br>
-          <input type="password" name="user[password]" value="" placeholder="Password"><br>
-          <input type="submit" name="name" value="Log in">
-        </form>
-      <form action="/signup">
-        <input type="submit" value="Sign Up">
-    </form>
+        <div class="left">
+          <form class="login" action="/auth" method="post">
+            <p>Login Into Your Account</p>
+            <input type="text" name="user[username]" value="" placeholder="Username"><br>
+            <input type="password" name="user[password]" value="" placeholder="Password"><br>
+            <input type="submit" name="name" value="Log in">
+          </form>
+        </div>
+        <div class="right">
+          <form action="/signup">
+            <input type="submit" value="Sign Up">
+          </form>
+        </div>
       </nav>
     </div>
   </body>
