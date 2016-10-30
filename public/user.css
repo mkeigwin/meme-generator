@@ -3,21 +3,123 @@
   padding: 0;
 }
 body {
-  background: url("mountain.jpg");
+  background: url("tile.png");
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
+  font-family: 'Abhaya Libre', serif;
+  text-align: center;
 }
 #first {
   background: url("mountain.jpg");
   background-size: cover;
     background-repeat: no-repeat;
   -webkit-animation-duration: .8s;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-delay: .5s;
   height: 100vh;
 }
 .real {
   position: absolute;
   top: 0;
+  left: 0;
   display: none;
+  height: 100vh;
+  width: 100vw;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h1 {
+  font-size: 12vh;
+  margin-bottom: 5vh;
+}
+h2 {
+  font-size: 6vh;
+  max-width: 70vw;
+  margin-bottom: 10vh;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20vh;
+}
+input {
+ font-size: 4vh;
+ margin: 10px;
+}
+p {
+  font-size: 1.5vw;
+}
+select {
+  font-size: 4vh;
+}
+#arrow {
+  width: 5vh;
+  cursor: pointer;
+}
+.alert {
+  display: none;
+    padding: 10px;
+    background-color: #87cefa;
+    color: white;
+    margin-left: 60px;
+}
+#arrow2 {
+  display: none;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 4vh;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#go {
+  -webkit-appearance: none;
+    width: 70px;
+    background-color:#FFF;
+    color:black;
+    border: solid #666 1px;
+    font-size: 4vh;
+    margin-left: 15px;
+}
+.bottom {
+  position: absolute;
+  top: 90vh;
+  left: 0;
+  width: 100vw;
+  margin: 0 auto;
+  font-size: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.bottomP {
+  position: absolute;
+  top: 90vh;
+  left: 0;
+  width: 100vw;
+  margin: 0 auto;
+  font-size: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  color: black;
+}
+.spacing {
+  margin: 0 5vw 0 5vw;
+  padding: 0;
 }
