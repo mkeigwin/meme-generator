@@ -9,6 +9,13 @@ body {
   height: 100vh;
   font-family: 'Abhaya Libre', serif;
 }
+.dropdown, .dropout {
+  position: absolute;
+  left: 14.85vw;
+  top: 14.5vh;
+  width: 40px;
+  padding: 5px;
+}
 h1 {
   text-shadow: 2px 2px 3px grey;
   color: #f9f9f9;
@@ -167,4 +174,35 @@ h3 {
   background: -moz-linear-gradient(#a2a4a5, #989898); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#a2a4a5, #989898); /* Standard syntax */
   padding: 3px 10px 3px 10px;
+}
+.guestLogin {
+  display: none;
+}
+.xyz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 30vw;
+  text-align: center;
+}
+h5 {
+  font-size: 1.5vw;
+  margin-bottom: 2vh;
+}
+#guest {
+  display: inline-block;
+  width: 140px;
+  height: 30px;
+  background: #76bde7; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#76bde7, #57b6f0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#76bde7, #57b6f0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#76bde7, #57b6f0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#76bde7, #57b6f0); /* Standard syntax */
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
 }

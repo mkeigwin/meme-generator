@@ -8,7 +8,30 @@ $(document).ready(function() {
     });
 
   $("#close").click(function(){
-        location.reload();
+        $("h4").fadeIn();
+        $(".guest").fadeIn();
+        $(".left").fadeIn();
+        $(".right").fadeIn();
+        $(".signup").hide();
+    });
+
+$(".dropdown").click(function(){
+        $("h4").hide();
+        $(".guest").hide();
+        $(".left").hide();
+        $(".right").hide();
+        $(".dropdown").hide();
+        $(".signup").hide();
+        $(".guestLogin").fadeIn();
+    });
+
+$(".dropout").click(function(){
+      $("h4").fadeIn();
+        $(".guest").fadeIn();
+        $(".left").fadeIn();
+        $(".right").fadeIn();
+        $(".dropdown").fadeIn();
+        $(".guestLogin").hide();
     });
 
 });
