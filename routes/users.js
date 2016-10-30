@@ -25,4 +25,10 @@ usersRouter.get('/profile', authenticate, (req, res) => {
   });
 });
 
+usersRouter.get('/homeProfile', authenticate, (req, res) => {
+  res.render('users/homeProfile', {
+    user: res.user,
+  });
+});
+
 module.exports = usersRouter;
