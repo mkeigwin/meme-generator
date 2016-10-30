@@ -6,30 +6,41 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <div class="main">
       <h1>Welcome To The Procrastinator</h1>
       <h2>The Worlds Best App for Generating Memes and Gifs!</h2>
       <nav>
+        <div class="signup">
+          <div id="close">
+            <img src="close.png" class="x">
+          </div>
+          <h1>Sign up</h1>
+          <form class="" action="/users" method="post">
+              <input type="text" name="user[username]" value="" placeholder="Username" required>
+              <input type="password" name="user[password]" value="" placeholder="Password" required>
+              <input type="submit" value="Sign up">
+          </form>
+        </div>
         <div id="or">
           <h4>or</h4>
         </div>
+        <button class="guest">Sign Up</button>
         <div class="left">
           <form class="login" action="/auth" method="post">
             <p>Login Into Your Account</p>
-            <input type="text" name="user[username]" value="" placeholder="Username"><br>
-            <input type="password" name="user[password]" value="" placeholder="Password"><br>
-            <input type="submit" name="name" value="Log in">
+            <input type="text" name="user[username]" value="" placeholder="Username" required><br>
+            <input type="password" name="user[password]" value="" placeholder="Password" required><br>
+            <input id="login" type="submit" name="name" value="Log in">
           </form>
         </div>
         <div class="right">
           <a href="/signup"><img id="facebook" src="facebook.png"></a>
           <a href="/signup"><img id="twitter" src="twitter.png"></a>
           <a href="/signup"><img id="google" src="google.png"></a>
-          <form action="/signup">
-            <input type="submit" value="Sign Up">
-          </form>
         </div>
       </nav>
     </div>
