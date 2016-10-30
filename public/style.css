@@ -48,7 +48,6 @@ nav {
   align-items: center;
 }
 .left {
-  /*padding-left: 6vw;*/
   border-right: 1px solid #515151;;
   height: 30vh;
   margin-bottom: 5vh;
@@ -79,14 +78,14 @@ p {
 #facebook {
   width: 148px;
   height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 #twitter {
   width: 130px;
   height: 25px;
 }
 #google {
-  margin-top: 20px;
+  margin-top: 15px;
   width: 135px;
   height: 30px;
 }
