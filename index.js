@@ -11,6 +11,7 @@ const searchRoute = require('./routes/search');
 const indexRouter = require('./routes/index.js');
 const authRouter = require('./routes/auth');
 const usersRouter = require('./routes/users');
+const guestRouter = require('./routes/guest');
 
 // making constant variables for the routes to be referencing further down
 const app = express();
@@ -48,6 +49,7 @@ app.listen(PORT, () => console.warn('server up and running on port ', PORT));
 
 // app listens on PORT as defined above, server in this case listens on port 3000
 app.use('/', indexRouter);
+app.use('/', guestRouter);
 app.use('/auth', authRouter);
 app.use('/users', usersRouter);
 app.use('/', libraryRoute);

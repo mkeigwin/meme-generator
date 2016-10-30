@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="search.css">
+  </head>
+  <body>
+    <h1>Search Results</h1>
+    <a href="/">Main</a>
+    <form action="/search" method="POST">
+      <input type="text" name="search" placeholder="Search By Keyword" required>
+      <select name="number">
+        <option value="5">5</option>
+        <option selected="selected" value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+      <input type="submit" value="Go">
+    </form>
+    <div class="spacer">
+      <h2>Meme results</h2>
+      <h2>Gif results</h2>
+    </div>
+    <div class="searchResults">
+      <div class="meme">
+        <% meme.forEach((value) => { %>
+          <p><%= value.urlName %></p>
+          <img src="<%= value.imageUrl %>">
+        <%})%>
+      </div>
+      <div class="gif">
+        <% gif.forEach((value) => { %>
+          <p><%= value.slug %></p>
+          <img src="<%= value.images.original.url %>">
+        <%})%>
+      </div>
+    </div>
+    <div class="buttonz">
+      <% for (let i= 0; i<= 4; i++) {%>
+        <form action="/search" method="POST">
+          <input type="hidden" value="<%= i %>" name="page">
+          <input type="hidden" value="<%= numbPage %>" name="number">
+          <input type="hidden" name="search" value="<%= searchQuery %>">
+          <input type="submit" value="<%= i+1 %>">
+        </form>
+      <%}%>
+    </div>
+  </body>
+</html>

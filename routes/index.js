@@ -7,9 +7,4 @@ indexRouter.get('/', (req, res) => {
   res.render('index');
 });
 
-// This route serves your `/signup` form
-indexRouter.get('/signup', (req, res) => {
-  res.render('signup');
-});
-
 module.exports = indexRouter;
