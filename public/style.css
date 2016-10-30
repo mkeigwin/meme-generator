@@ -49,7 +49,7 @@ nav {
 }
 .left {
   /*padding-left: 6vw;*/
-  border-right: 1px solid grey;
+  border-right: 1px solid #515151;;
   height: 30vh;
   margin-bottom: 5vh;
 }
@@ -65,10 +65,15 @@ nav {
 p {
   margin-bottom: 20px;
   font-size: 2.2vh;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #636363;
+  color: #636363;
 }
 #login {
-  background-color: #989898;
+  background: #989898; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#a2a4a5, #989898); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#a2a4a5, #989898); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#a2a4a5, #989898); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#a2a4a5, #989898); /* Standard syntax */
   padding: 3px 10px 3px 10px;
 }
 #facebook {
@@ -91,13 +96,18 @@ h4 {
   top: 45vh;
   left: 49.25vw;
   font-size: 3vh;
+  color: #515151;
 }
 .guest {
   position: absolute;
   display: inline-block;
   width: 140px;
   height: 30px;
-  background-color: #76bde7;
+  background: #76bde7; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#76bde7, #57b6f0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#76bde7, #57b6f0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#76bde7, #57b6f0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#76bde7, #57b6f0); /* Standard syntax */
   top: 64vh;
   left: 45vw;
   border-radius: 3px;
@@ -109,6 +119,9 @@ h4 {
 a {
   text-decoration: none;
   color: black;
+}
+.xc {
+  padding: 3px 30px 3px 0px;
 }
 .signup {
   display: none;
@@ -122,4 +135,37 @@ a {
 button {
   font-size: 1.5vh;
 }
-
+h3 {
+  font-size: 8vh;
+  margin-bottom: 1vh;
+  color: #515151;
+  text-shadow: 1.3px 1.3px 3px grey;
+}
+.require {
+  position: absolute;
+  display: inline-block;
+  top: 66vh;
+  left: 60vw;
+  font-size: 1vw;
+  color: #515151;
+}
+.sign {
+  margin-bottom: 4vh;
+}
+.xp {
+  padding: 5px 50px 5px 0px;
+  margin: 4px;
+  text-align: left;
+}
+#xp {
+  position: absolute;
+  display: inline-block;
+  top: 66vh;
+  left: 47.5vw;
+  background: #989898; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#a2a4a5, #989898); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#a2a4a5, #989898); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#a2a4a5, #989898); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#a2a4a5, #989898); /* Standard syntax */
+  padding: 3px 10px 3px 10px;
+}

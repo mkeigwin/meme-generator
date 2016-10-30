@@ -15,14 +15,18 @@
       <h2>The Worlds Best App for Generating Memes and Gifs!</h2>
       <nav>
         <div class="signup">
+          <div class="require">*Inputs Required</div>
           <div id="close">
             <img src="close.png" class="x">
           </div>
-          <h1>Sign up</h1>
-          <form class="" action="/users" method="post">
-              <input type="text" name="user[username]" value="" placeholder="Username" required>
-              <input type="password" name="user[password]" value="" placeholder="Password" required>
-              <input type="submit" value="Sign up">
+          <h3>Sign up</h3>
+          <form class="sign" action="/users" method="post">
+            <input class="xp" type="text" name="user[username]" value="" placeholder="Username*" required><br>
+            <input class="xp" type="password" name="user[password]" value="" placeholder="Password*" required><br>
+            <input class="xp" type="text" placeholder="Email"><br>
+            <input class="xp" type="text" placeholder="Phone"><br>
+            <input class="xp" type="text" placeholder="Address"><br>
+            <input id="xp" type="submit" value="Sign up">
           </form>
         </div>
         <div id="or">
@@ -32,15 +36,15 @@
         <div class="left">
           <form class="login" action="/auth" method="post">
             <p>Login Into Your Account</p>
-            <input type="text" name="user[username]" value="" placeholder="Username" required><br>
-            <input type="password" name="user[password]" value="" placeholder="Password" required><br>
+            <input class="xc" type="text" name="user[username]" value="" placeholder="Username" required><br>
+            <input class="xc" type="password" name="user[password]" value="" placeholder="Password" required><br>
             <input id="login" type="submit" name="name" value="Log in">
           </form>
         </div>
         <div class="right">
-          <a href="/signup"><img id="facebook" src="facebook.png"></a>
-          <a href="/signup"><img id="twitter" src="twitter.png"></a>
-          <a href="/signup"><img id="google" src="google.png"></a>
+          <a href="https://www.facebook.com/login"><img id="facebook" src="facebook.png"></a>
+          <a href="https://twitter.com/twitter"><img id="twitter" src="twitter.png"></a>
+          <a href="https://plus.google.com"><img id="google" src="google.png"></a>
         </div>
       </nav>
     </div>
