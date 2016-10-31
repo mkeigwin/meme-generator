@@ -26,7 +26,6 @@ h1 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 .meme, .gif {
   margin: auto;
@@ -39,7 +38,7 @@ box-shadow: 1px 1px 1px #545454;
 }
 img {
   padding: 20px 0 0 0;
-  max-width: 30vw;
+  max-width: 40vw;
   height: auto;
   margin: auto;
 }
@@ -90,7 +89,7 @@ a:hover {
 }
 .links {
   position: absolute;
-  top: 2vh;
+  top: 3vh;
   left: 75vw;
       display: flex;
   flex-direction: row;
@@ -98,7 +97,6 @@ a:hover {
   align-items: center;
 }
 #gohome {
-  margin-top: .75vh;
   margin-left: 7vw;
   font-size: 3vh;
 }

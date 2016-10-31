@@ -15,10 +15,6 @@
     <div class="links" id="gohome">
       <a href="/">Main</a>
     </div>
-    <div class="alert">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-      <strong>Number of Results Per Page</strong>
-    </div>
     <div class="spacer">
       <h2>Meme results</h2>
       <h2>Gif results</h2>
@@ -26,12 +22,12 @@
     <div class="searchResults">
       <div class="meme">
         <% meme.forEach((value) => { %>
-          <img src="<%= value.imageUrl %>">
+          <img src="<%= value.imageUrl %>"><br>
         <%})%>
       </div>
       <div class="gif">
         <% gif.forEach((value) => { %>
-          <img src="<%= value.images.original.url %>">
+          <img src="<%= value.images.original.url %>"><br>
         <%})%>
       </div>
     </div>
