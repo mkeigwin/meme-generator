@@ -9,7 +9,7 @@ body {
   background-repeat: no-repeat;
   font-family: 'Abhaya Libre', serif;
   text-align: center;
-  text-shadow: 1px 1px 2px #333333;
+  text-shadow: 1px 1px 1px #333333;
 }
 #first {
   background: url("mountain.jpg");
