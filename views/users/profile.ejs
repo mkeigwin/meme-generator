@@ -40,5 +40,9 @@
         </div>
       </div>
     </div>
+    <form class="edit" action="/<%= movie._id %>?_method=PUT" method="POST">
+      <input type="text" name="movie[Title]" value="<%= movie.Title %>">
+      <input type="submit" value="update">
+    </form>
   </body>
 </html>
