@@ -11,10 +11,15 @@ body {
 }
 .dropdown, .dropout {
   position: absolute;
-  left: 14.85vw;
-  top: 14.5vh;
-  width: 40px;
+  left: 30.5vw;
+  top: 30vh;
   padding: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #ccc;
+}
+.dropdown:hover, .dropout:hover {
+  color: grey !important;
 }
 h1 {
   text-shadow: 2px 2px 3px grey;
@@ -81,6 +86,16 @@ p {
   background: -moz-linear-gradient(#a2a4a5, #989898); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#a2a4a5, #989898); /* Standard syntax */
   padding: 3px 10px 3px 10px;
+  box-shadow: 2px 2px 3px #545454;
+  cursor: pointer;
+}
+#login:hover {
+  background: #807e80;
+   background: -webkit-gradient(linear, left top, left bottom, from(#9e9ea3), to(#807e80));
+   background: -webkit-linear-gradient(top, #9e9ea3, #807e80);
+   background: -moz-linear-gradient(top, #9e9ea3, #807e80);
+   background: -ms-linear-gradient(top, #9e9ea3, #807e80);
+   background: -o-linear-gradient(top, #9e9ea3, #807e80);
 }
 #facebook {
   width: 148px;
@@ -109,11 +124,14 @@ h4 {
   display: inline-block;
   width: 140px;
   height: 30px;
-  background: #76bde7; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#76bde7, #57b6f0); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#76bde7, #57b6f0); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#76bde7, #57b6f0); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#76bde7, #57b6f0); /* Standard syntax */
+background: #6ba8d1;
+   background: -webkit-gradient(linear, left top, left bottom, from(#a4d3f2), to(#6ba8d1));
+   background: -webkit-linear-gradient(top, #a4d3f2, #6ba8d1);
+   background: -moz-linear-gradient(top, #a4d3f2, #6ba8d1);
+   background: -ms-linear-gradient(top, #a4d3f2, #6ba8d1);
+   background: -o-linear-gradient(top, #a4d3f2, #6ba8d1);
+  box-shadow: 2px 2px 3px #545454;
+  cursor: pointer;
   top: 64vh;
   left: 45vw;
   border-radius: 3px;
@@ -121,6 +139,14 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.guest:hover {
+ background: #609cc4;
+   background: -webkit-gradient(linear, left top, left bottom, from(#6eb6e6), to(#609cc4));
+   background: -webkit-linear-gradient(top, #6eb6e6, #609cc4);
+   background: -moz-linear-gradient(top, #6eb6e6, #609cc4);
+   background: -ms-linear-gradient(top, #6eb6e6, #609cc4);
+   background: -o-linear-gradient(top, #6eb6e6, #609cc4);
 }
 a {
   text-decoration: none;
@@ -133,10 +159,15 @@ a {
   display: none;
 }
 .x {
-  width: 20px;
   position: absolute;
   left: 67.5vw;
   top: 31vh;
+  cursor: pointer;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #ccc;
+}
+.x:hover, .x:hover {
+  color: grey !important;
 }
 button {
   font-size: 1.5vh;
@@ -173,7 +204,17 @@ h3 {
   background: -o-linear-gradient(#a2a4a5, #989898); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#a2a4a5, #989898); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#a2a4a5, #989898); /* Standard syntax */
+  box-shadow: 2px 2px 3px #545454;
+  cursor: pointer;
   padding: 3px 10px 3px 10px;
+}
+#xp:hover {
+  background: #807e80;
+   background: -webkit-gradient(linear, left top, left bottom, from(#9e9ea3), to(#807e80));
+   background: -webkit-linear-gradient(top, #9e9ea3, #807e80);
+   background: -moz-linear-gradient(top, #9e9ea3, #807e80);
+   background: -ms-linear-gradient(top, #9e9ea3, #807e80);
+   background: -o-linear-gradient(top, #9e9ea3, #807e80);
 }
 .guestLogin {
   display: none;
@@ -195,15 +236,26 @@ h5 {
   display: inline-block;
   width: 140px;
   height: 30px;
-  background: #76bde7; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#76bde7, #57b6f0); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#76bde7, #57b6f0); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#76bde7, #57b6f0); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#76bde7, #57b6f0); /* Standard syntax */
+background: #6ba8d1;
+   background: -webkit-gradient(linear, left top, left bottom, from(#a4d3f2), to(#6ba8d1));
+   background: -webkit-linear-gradient(top, #a4d3f2, #6ba8d1);
+   background: -moz-linear-gradient(top, #a4d3f2, #6ba8d1);
+   background: -ms-linear-gradient(top, #a4d3f2, #6ba8d1);
+   background: -o-linear-gradient(top, #a4d3f2, #6ba8d1);
+  box-shadow: 2px 2px 3px #545454;
+  cursor: pointer;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 3vh;
+}
+#guest:hover {
+ background: #609cc4;
+   background: -webkit-gradient(linear, left top, left bottom, from(#6eb6e6), to(#609cc4));
+   background: -webkit-linear-gradient(top, #6eb6e6, #609cc4);
+   background: -moz-linear-gradient(top, #6eb6e6, #609cc4);
+   background: -ms-linear-gradient(top, #6eb6e6, #609cc4);
+   background: -o-linear-gradient(top, #6eb6e6, #609cc4);
 }
