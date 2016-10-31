@@ -5,10 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <link rel="stylesheet" href="search.css">
-    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre" rel="stylesheet">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Proza+Libre" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/script.js"></script>
   </head>
   <body>
-    <h1>Search Results</h1>
+    <h1>"<%= searchQuery %>" search results</h1>
+    <div class="links" id="gohome">
+      <a href="/">Main</a>
+    </div>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <strong>Number of Results Per Page</strong>
+    </div>
     <div class="spacer">
       <h2>Meme results</h2>
       <h2>Gif results</h2>
@@ -16,17 +26,14 @@
     <div class="searchResults">
       <div class="meme">
         <% meme.forEach((value) => { %>
-          <p><%= value.urlName %></p>
           <img src="<%= value.imageUrl %>">
         <%})%>
       </div>
       <div class="gif">
         <% gif.forEach((value) => { %>
-          <p><%= value.slug %></p>
           <img src="<%= value.images.original.url %>">
         <%})%>
       </div>
     </div>
-    <a href="/">NOW SIGN UP!!!!</a>
   </body>
 </html>

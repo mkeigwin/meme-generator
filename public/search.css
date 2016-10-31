@@ -70,7 +70,7 @@ h2 {
 a {
   text-decoration: none!important;
   color: black;
-  margin: 5px 0 5px 0;
+  margin-left: 3vw;
   background: #989898; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#a2a4a5, #989898); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#a2a4a5, #989898); /* For Opera 11.1 to 12.0 */
@@ -80,15 +80,28 @@ a {
   box-shadow: 2px 2px 3px #545454;
   cursor: pointer;
 }
+a:hover {
+  background: #807e80;
+   background: -webkit-gradient(linear, left top, left bottom, from(#9e9ea3), to(#807e80));
+   background: -webkit-linear-gradient(top, #9e9ea3, #807e80);
+   background: -moz-linear-gradient(top, #9e9ea3, #807e80);
+   background: -ms-linear-gradient(top, #9e9ea3, #807e80);
+   background: -o-linear-gradient(top, #9e9ea3, #807e80);
+}
 .links {
   position: absolute;
   top: 2vh;
-  left: 90vw;
+  left: 75vw;
       display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+#gohome {
+  margin-top: .75vh;
+  margin-left: 7vw;
+  font-size: 3vh;
+}
 .button {
   background: #989898; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#a2a4a5, #989898); /* For Safari 5.1 to 6.0 */
@@ -99,7 +112,7 @@ a {
   box-shadow: 2px 2px 3px #545454;
   cursor: pointer;
 }
-.button {
+.button:hover {
   background: #807e80;
    background: -webkit-gradient(linear, left top, left bottom, from(#9e9ea3), to(#807e80));
    background: -webkit-linear-gradient(top, #9e9ea3, #807e80);
@@ -148,4 +161,7 @@ form {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+#getaway {
+  margin-right: .5vw;
 }
