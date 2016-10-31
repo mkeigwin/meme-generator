@@ -21,7 +21,7 @@
           <strong>Number of Results Per Page</strong>
         </div>
         <form action="/search" method="POST">
-          <input type="text" name="search" placeholder="Search By Keyword" required>
+          <input id="search" type="text" name="search" placeholder="Search By Keyword" required>
           <select name="number">
             <option value="5">5</option>
             <option selected="selected" value="10">10</option>
@@ -34,7 +34,7 @@
         <div class="bottomP">
           <a class="spacing" id="none" href="/library">LIBRARY</a>
           <form class="spacing" action="/auth?_method=DELETE" method="post">
-            <input type="submit" value="Logout">
+            <input id="logout" type="submit" value="LOGOUT">
           </form>
         </div>
       </div>
