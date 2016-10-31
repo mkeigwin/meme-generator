@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Proza+Libre" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/script.js"></script>
   </head>
   <body>
     <div class="links">
       <a href="/users/homeProfile">HOME</a>
       <a href="/library">LIBRARY</a>
+    </div>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <strong>Number of Results Per Page</strong>
     </div>
     <div class="header">
       <h1>"<%= searchQuery %>" search results</h1>
@@ -22,6 +29,7 @@
           <option value="15">15</option>
           <option value="20">20</option>
         </select>
+        <i class="fa fa-caret-down" id="arrow" aria-hidden="true"></i>
         <input class="button" type="submit" value="Go">
       </form>
     </div>
