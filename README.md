@@ -78,7 +78,7 @@ In this piece of code I am displaying how I use the parameters in the query stri
 
 This code displays how my ejs code looks when displaying my favorites on the library page. The first thing I would like to point out is the if function included. For some (unknown) reason, when I saved something to favorites it would recieve my image and an empty object, my solution (along with booby's help) was to create an if function so only objects with an image name would render ro the page. Also seen in this image is that I put both API image results in one div with one delete button. Originally I had the two API rendering in two seperate collums, similar to my search page on actual app, but for stylistic purposes I decided to include them all in one div so that no matter what the user selects as a favorite the page will look equally pleasing.
 
-## Installationo
+## Installation
 
 If viewing this on Heroku, the app should work immediatly, all you need to do is make an account and start using it!
 
