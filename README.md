@@ -11,18 +11,19 @@ Full stack app allowing users to find and save their favorite images based off o
 As a User 
 
 - Preform multiple searchs of memes and gits, scrolling through multiple pages of results
+- Edit your Username
 -Save your favorite images to your personal library
 -Download images from your library by clicking on them
 -Remove images from your library
  
-As a user 
+As a Guest 
 
 - Test out the app by preforming one search of gifs and memes
 -Limited access to images and personal library
 
 ## App Use
 
-Once a user is signed into thier account, the user is brought to their home page with a customized header. A search bar is present in the middle of the screen where the user can search for memes and gifs based on keywords. A toggle function is used to next to the search bar to select how many results render per page. 
+Once a user is signed into thier account, the user is brought to their home page with a customized header. A search bar is present in the middle of the screen where the user can search for memes and gifs based on keywords. A toggle function is used to next to the search bar to select how many results render per page. Hitting the icon in the top left of the screen allows you to change the users user name
 
 After you search, your meme and gif results will display side by side. Click on the save button to put them in your library, click the numbers at the bottom of the page to go to the next page, or type in new search at the top of the page to search by new key words
 
@@ -89,9 +90,10 @@ If you are forking it from github, in your terminal window do the command "npm i
 In addition to API aslo used these sources in completion of project
 
 1. Trevor, for his hacky way of fixing my site that had no noticable issue
-2. http://www.w3schools.com/howto/howto_js_alert.asp 
+2. Joey, who helped me impliment my put function. Allowing users to change their username.
+3. http://www.w3schools.com/howto/howto_js_alert.asp 
 Used to get get information popups appear on page when clicked
-3. MOST IMPORTANT bobby/rafa itune, which I referenced frequently to make sure I was on the right track
+4. MOST IMPORTANT bobby/rafa itune, which I referenced frequently to make sure I was on the right track
 
 ## Hurdles
 
