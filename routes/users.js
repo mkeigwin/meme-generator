@@ -1,5 +1,4 @@
-/* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
-
+// the create user aspect of this page is a itunes CRUD attribution
 const express = require('express');
 const { createUser } = require('../models/user.js');
 const { authenticate } = require('../lib/auth');
@@ -14,11 +13,6 @@ usersRouter.post('/', createUser, (req, res) => {
   res.redirect('/');
 });
 
-/**
- * Takes the user to its profile by handling any GET request to `/users/profile`
- * It redirects to /login when attempted to be reached by a non logged in user
- * It is "protected" by the authenticate middleware from the auth library
- */
 usersRouter.get('/profile', authenticate, (req, res) => {
   res.render('users/profile', {
     user: res.user,

@@ -8,14 +8,14 @@ function searchGif(req, res, next) {
   const number = req.body.number || 10;
 
   fetch(`${API_URL}q=${qs}&api_key=dc6zaTOxFJmzC&limit=${number}&offset=${page}`)
- .then(r => r.json())
- .then((result) => {
-   res.gif = result.data;
-   next();
- })
- .catch((err) => {
-   res.err = err;
-   next();
- });
+  .then(r => r.json())
+  .then((result) => {
+    res.gif = result.data;
+    next();
+  })
+  .catch((err) => {
+    res.err = err;
+    next();
+  });
 }
 module.exports = { searchGif };

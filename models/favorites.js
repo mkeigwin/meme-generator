@@ -3,7 +3,6 @@ const { MongoClient, ObjectID } = require('mongodb');
 const DB_CONNECTION = 'mongodb://localhost:27017/generate';
 
 function getFavorites(req, res, next) {
-  // find all favorites for your userId
   MongoClient.connect(DB_CONNECTION, (err, db) => {
     if (err) return next(err);
     db.collection('favorites')
@@ -20,11 +19,12 @@ function getFavorites(req, res, next) {
 }
 
 function saveFavorite(req, res, next) {
-  // creating an empty object for the insertObj
+
+// this part below is attributed to trevor, My userId was not showing up so he "hacked" a way for it to appear
   const insertObj = {
     favorite: {
       userId: undefined,
-    }
+    },
   };
 
   // copying all of req.body into insertObj
@@ -40,7 +40,6 @@ function saveFavorite(req, res, next) {
     db.collection('favorites')
       .insert(insertObj.favorite, (insertErr, result) => {
         if (insertErr) return next(insertErr);
-        console.log(result);
         res.saved = result;
         db.close();
         next();

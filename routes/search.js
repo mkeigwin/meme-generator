@@ -6,7 +6,6 @@ const { searchGif } = require('../services/gif');
 const { saveFavorite } = require('../models/favorites');
 
 router.post('/', authenticate, searchMeme, searchGif, saveFavorite, (req, res) => {
-// router.post('/', authenticate, searchMeme, searchGif, (req, res) => {
   res.render('search', {
     user: res.user,
     meme: res.meme || [],
