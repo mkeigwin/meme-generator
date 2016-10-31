@@ -1,4 +1,4 @@
-# meme-generator
+# The Procrastinator
 
 ## Description
 
@@ -68,6 +68,16 @@ Library
 - Giphy API
 - Meme Generator API
 
+## Interesting Code
+
+![](/readImg/snip1.png)
+
+In this piece of code I am displaying how I use the parameters in the query string. Since I am calling 2 API at the exact same time I chose to make variables that I call qs, page and number respectively so that I can change both of those values and have them apply to both API's. Also seen in the code is how I pass the API information as res.meme to the routers, where they will be called later
+
+![](/readImg/snip2.png)
+
+This code displays how my ejs code looks when displaying my favorites on the library page. The first thing I would like to point out is the if function included. For some (unknown) reason, when I saved something to favorites it would recieve my image and an empty object, my solution (along with booby's help) was to create an if function so only objects with an image name would render ro the page. Also seen in this image is that I put both API image results in one div with one delete button. Originally I had the two API rendering in two seperate collums, similar to my search page on actual app, but for stylistic purposes I decided to include them all in one div so that no matter what the user selects as a favorite the page will look equally pleasing.
+
 ## Installationo
 
 If viewing this on Heroku, the app should work immediatly, all you need to do is make an account and start using it!
@@ -94,7 +104,6 @@ Used to get get information popups appear on page when clicked
 
 In my initial purposal I wanted to be able to write text over my gifs and memes. The problem that I faced with that was that every time the page reloaded the text you had written went away. My solution was to use canvas to append text to the pictures, but when I did that the gifs would freeze, instead of play thier short videos. I ultimatly abandoned this plan and included a download feature so that the images could be saved to your computer with a click.
 
-# meme-generator
 
 
-code samples and explanations.
+//code samples and explanations.
