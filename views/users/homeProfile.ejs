@@ -13,6 +13,16 @@
   </head>
   <body>
     <div>
+      <div class="dropdown"><i class="fa fa-bars" aria-hidden="true"></i></div>
+      <div class="dropout"><i class="fa fa-bars" aria-hidden="true"></i></div>
+      <div class="update">
+        <p>Enter Your Name To Update Username</p>
+        <form class="edit" action="/users/edit?_method=PUT" method="POST">
+          <input id="upname" type='text' name='username' value='' placeholder='username'>
+          <input type='hidden' name='id' value='<%= id %>'>
+          <input id="update" type="submit" value="update">
+        </form>
+      </div>
       <div class="main">
         <h1>Welcome <%= user.username %>!</h1>
         <h2>Search for Memes and Gifs by Entering Keyword into Search Bar</h2>

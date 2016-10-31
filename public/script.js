@@ -8,4 +8,16 @@ $(document).ready(function () {
     $('.alert').show();
   });
 // when click on arrow a pop up bar appears informing user about functionality
+
+  $('.dropdown').click(function () {
+    $('.update').show();
+    $('.dropout').show();
+    $('.dropdown').hide();
+  });
+
+  $('.dropout').click(function () {
+    $('.update').hide();
+    $('.dropout').hide();
+    $('.dropdown').show();
+  });
 });

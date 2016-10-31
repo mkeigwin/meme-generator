@@ -124,10 +124,10 @@ select {
   justify-content: center;
   align-items: center;
 }
-#go {
+#go, #update {
   font-family: 'Abhaya Libre', serif;
 }
-a, #logout, #go {
+a, #logout, #go, #update {
   color: black;
   text-decoration: none;
   background: #cfcbcf;
@@ -140,16 +140,19 @@ a, #logout, #go {
   padding: 3px 10px 3px 10px;
   border-radius: 2px;
 }
-#logout, #go{
+#logout, #go, #update{
   font-weight: 500;
 }
-a:hover, #logout:hover, #go:hover {
+a:hover, #logout:hover, #go:hover, #update:hover {
   background: #807e80;
   background: -webkit-gradient(linear, left top, left bottom, from(#9e9ea3), to(#807e80));
   background: -webkit-linear-gradient(top, #9e9ea3, #807e80);
   background: -moz-linear-gradient(top, #9e9ea3, #807e80);
   background: -ms-linear-gradient(top, #9e9ea3, #807e80);
   background: -o-linear-gradient(top, #9e9ea3, #807e80);
+}
+#upname, #update {
+  font-size: 3vh;
 }
 .spacing {
   margin: 0 5vw 0 5vw;
@@ -161,4 +164,24 @@ a:hover, #logout:hover, #go:hover {
   text-shadow: 1px 1px 2px #333333;
   padding: 3px;
   font-size: 4vh;
+}
+.dropout, .update {
+  display: none;
+}
+.update {
+  position: absolute;
+  left: 5vw;
+  height: 2vh;
+}
+.dropdown, .dropout {
+  position: absolute;
+  left: 2vw;
+  top: 4.75vh;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px #ccc;
+}
+.dropdown:hover, .dropout:hover {
+  color: grey !important;
 }

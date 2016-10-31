@@ -1,6 +1,6 @@
 // the create user aspect of this page is a itunes CRUD attribution
 const express = require('express');
-const { createUser } = require('../models/user.js');
+const { createUser, editName } = require('../models/user.js');
 const { authenticate } = require('../lib/auth');
 
 const usersRouter  = express.Router();
@@ -18,6 +18,7 @@ usersRouter.get('/profile', authenticate, (req, res) => {
   res.render('users/profile', {
 // user passes name of info to homeProfile
     user: res.user,
+    id: req.session.userId,
   });
 });
 // above and below routes used to get to home page
@@ -25,8 +26,13 @@ usersRouter.get('/profile', authenticate, (req, res) => {
 usersRouter.get('/homeProfile', authenticate, (req, res) => {
   res.render('users/homeProfile', {
     user: res.user,
+    id: req.session.userId,
 // user passes name of info to homeProfile
   });
+});
+
+usersRouter.put('/edit', editName, (req, res) => {
+  res.redirect('/users/homeProfile');
 });
 
 module.exports = usersRouter;

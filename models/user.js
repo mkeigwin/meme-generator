@@ -1,4 +1,4 @@
-// this page is a itunes CRUD attribution
+// this page is a itunes CRUD attribution and EDIT IS ATTRIBUTED IN PART TO JOEYYYYYYY
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 /* eslint no-param-reassign: ["error", { "props": false }] */
 
@@ -57,21 +57,12 @@ function getUserByUsername(username) {
   });
 }
 
-function editName (req, res, next) {
-  MongoClient.connect(dbConnection, (err, db) => {
-    if (err) return next(err);
-
+function editName(req, res, next) {
+  getDB().then((db) => {
     db.collection('users')
-      .findAndModify({ _id: ObjectID(req.params.id) }, [] /* sort */,
-      { $set: req.body.username }, { new: true } /* options */, (updateError, doc) => {
-        if (updateError) return next(updateError);
-
-        // return the data
-        res.updated = doc;
-        db.close();
-        return next();
-      });
-    return false;
+    .update({ _id: ObjectID(req.body.id) }, { $set: { username: req.body.username } });
+    db.close();
+    return next();
   });
   return false;
 }
@@ -80,4 +71,5 @@ module.exports = {
   createUser,
   getUserById,
   getUserByUsername,
+  editName,
 };
