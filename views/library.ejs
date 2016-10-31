@@ -11,7 +11,8 @@
   <body>
     <h1>LIBRARY</h1>
     <a id="link" href="/users/homeProfile">HOME</a>
-    <h2><%= user.username %>'s Favorites:</h2>
+    <h2><%= user.username %>'s Favorites</h2>
+    <h3>click images to download</h3>
     <div id="favorites-container">
       <% favorites.forEach((favorite) => { %>
         <% if (favorite.slug || favorite.urlName) {%>
@@ -22,7 +23,7 @@
           <a href="<%= favorite.imagesoriginalurl %>" download>
             <img src="<%= favorite.imagesoriginalurl %>">
           </a>
-        <form action="/library/<%= favorite._id %>?_method=DELETE" method="post">
+        <form class="delete" action="/library/<%= favorite._id %>?_method=DELETE" method="post">
           <input type="submit" value="Delete">
         </form>
         </div>

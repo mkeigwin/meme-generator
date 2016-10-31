@@ -4,13 +4,33 @@
 }
 h1 {
   position: absolute;
-  top: 0;
-  left: 0;
+  font-size: 8vh;
+  top: 1vh;
+  left: 1vw;
 }
 #link {
   position: absolute;
-  top: 0;
-  left: 95vw;
+  top: 3vh;
+  left: 90vw;
+  text-decoration: none!important;
+  color: black;
+  background: #989898; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#a2a4a5, #989898); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#a2a4a5, #989898); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#a2a4a5, #989898); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#a2a4a5, #989898); /* Standard syntax */
+  font-size: 2vw;
+  padding: .3vh .6vw .3vh .6vw;
+  box-shadow: 2px 2px 3px #545454;
+  cursor: pointer;
+}
+#link:hover {
+  background: #807e80;
+   background: -webkit-gradient(linear, left top, left bottom, from(#9e9ea3), to(#807e80));
+   background: -webkit-linear-gradient(top, #9e9ea3, #807e80);
+   background: -moz-linear-gradient(top, #9e9ea3, #807e80);
+   background: -ms-linear-gradient(top, #9e9ea3, #807e80);
+   background: -o-linear-gradient(top, #9e9ea3, #807e80);
 }
 body {
   background: url("tile.png");
@@ -37,6 +57,7 @@ body {
 }
 h2 {
   text-align: center;
+  font-size: 6vh;
 }
 img {
   max-width: 27vw;
