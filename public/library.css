@@ -1,7 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#link {
+  position: absolute;
+  top: 0;
+  left: 95vw;
+}
 body {
   background: url("tile.png");
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
   font-family: 'Abhaya Libre', serif;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#favorites-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  overflow-y: auto;
+  height: 80vh;
+  background-color: rgba(220,220,220, .5);
+  box-shadow: 1px 1px 1px #545454;
+}
+h2 {
+  text-align: center;
+}
+img {
+  max-width: 27vw;
+  max-height: 40vh;
+}
+.textOutput {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  width: 27vw;
+  height: 40vh;
+  border-bottom: 1px solid black;
 }

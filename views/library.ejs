@@ -10,26 +10,24 @@
   </head>
   <body>
     <h1>LIBRARY</h1>
-    <a href="/users/homeProfile">HOME</a>
+    <a id="link" href="/users/homeProfile">HOME</a>
+    <h2><%= user.username %>'s Favorites:</h2>
     <div id="favorites-container">
-      <div class="memeFave">
-        <h1><%= user.username %>'s Favorites:</h1>
-        <% favorites.forEach((favorite) => { %>
-          <% if (favorite.slug || favorite.urlName) {%>
-           <div class="textOutput">
-            <a href="<%= favorite.imageUrl %>" download>
-              <img src="<%= favorite.imageUrl %>">
-            </a>
-            <a href="<%= favorite.imagesoriginalurl %>" download>
-              <img src="<%= favorite.imagesoriginalurl %>">
-            </a>
-          </div>
-          <form action="/library/<%= favorite._id %>?_method=DELETE" method="post">
-            <input type="submit" value="Delete">
-          </form>
-         <%}%>
-        <% }) %>
-      </div>
+      <% favorites.forEach((favorite) => { %>
+        <% if (favorite.slug || favorite.urlName) {%>
+         <div class="textOutput">
+          <a href="<%= favorite.imageUrl %>" download>
+            <img src="<%= favorite.imageUrl %>">
+          </a>
+          <a href="<%= favorite.imagesoriginalurl %>" download>
+            <img src="<%= favorite.imagesoriginalurl %>">
+          </a>
+        <form action="/library/<%= favorite._id %>?_method=DELETE" method="post">
+          <input type="submit" value="Delete">
+        </form>
+        </div>
+       <%}%>
+      <% }) %>
     </div>
   </body>
 </html>
