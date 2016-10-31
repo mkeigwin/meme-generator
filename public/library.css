@@ -1,0 +1,7 @@
+body {
+  background: url("tile.png");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  font-family: 'Abhaya Libre', serif;
+}

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/library.css">
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js" charset="utf-8"></script>
   </head>
   <body>
@@ -12,7 +13,7 @@
     <a href="/users/homeProfile">HOME</a>
     <div id="favorites-container">
       <div class="memeFave">
-        <h2><%= user.username %>'s Favorites:</h2>
+        <h1><%= user.username %>'s Favorites:</h1>
         <% favorites.forEach((favorite) => { %>
           <% if (favorite.slug || favorite.urlName) {%>
            <div class="textOutput">
@@ -26,21 +27,9 @@
           <form action="/library/<%= favorite._id %>?_method=DELETE" method="post">
             <input type="submit" value="Delete">
           </form>
-          <form name="userInput">
-            <input type="text" name="textInput"/>
-            <button id="confirm">Confirm</button>
-          </form>
          <%}%>
         <% }) %>
       </div>
     </div>
-    <script>
-   $(document).ready(function(){
-    $('#confirm').click(function() {
-        var playerName = $('input[name=textInput]').val();
-        $(".textOutput").append("<p>" + playerName + "</p>");
-    });
-});
-   </script>
   </body>
 </html>
