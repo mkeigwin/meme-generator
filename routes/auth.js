@@ -24,3 +24,4 @@ authRouter.delete('/', (req, res) => {
 });
 
 module.exports = authRouter;
+// exports routers so all the pages can be linked

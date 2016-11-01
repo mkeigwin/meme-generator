@@ -30,7 +30,7 @@ usersRouter.get('/homeProfile', authenticate, (req, res) => {
 // user passes name of info to homeProfile
   });
 });
-
+// when edit, redirect to homeprofit page, call editName middleware
 usersRouter.put('/edit', editName, (req, res) => {
   res.redirect('/users/homeProfile');
 });

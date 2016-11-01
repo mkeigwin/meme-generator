@@ -14,10 +14,12 @@ $(document).ready(function () {
     $('.dropout').show();
     $('.dropdown').hide();
   });
+// shows update username link
 
   $('.dropout').click(function () {
     $('.update').hide();
     $('.dropout').hide();
     $('.dropdown').show();
+// hides update username link
   });
 });

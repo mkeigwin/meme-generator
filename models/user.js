@@ -8,16 +8,18 @@ const bcrypt = require('bcryptjs');
 
 const SALTROUNDS = 10;
 
+// function taken from itunes, works with sign in page to create users
 function createUser(req, res, next) {
   const userObject = {
     username: req.body.user.username,
     email: req.body.user.email,
 
-    // Store hashed password
+// Store hashed password (incripted)
     password: bcrypt.hashSync(req.body.user.password, SALTROUNDS),
   };
 
   getDB().then((db) => {
+// saves user info inside generate to a collection called users
     db.collection('users')
       .insert(userObject, (insertErr, dbUser) => {
         if (insertErr) return next(insertErr);
@@ -29,6 +31,8 @@ function createUser(req, res, next) {
   });
 }
 
+// get the id of user that is used when sign in and saving to library
+// created in itunes
 function getUserById(id) {
   return getDB().then((db) => {
     const promise = new Promise((resolve, reject) => {
@@ -43,9 +47,12 @@ function getUserById(id) {
   });
 }
 
+// get the username of user that is used when sign in and saving to library
+// created in itunes
 function getUserByUsername(username) {
   return getDB().then((db) => {
     const promise = new Promise((resolve, reject) => {
+// saves user info inside generate to a collection called users
       db.collection('users')
         .findOne({ username }, (findError, user) => {
           if (findError) reject(findError);
@@ -57,6 +64,8 @@ function getUserByUsername(username) {
   });
 }
 
+// function that allows a user to edit page once they login
+// takes stored information in users collection
 function editName(req, res, next) {
   getDB().then((db) => {
     db.collection('users')
@@ -67,6 +76,7 @@ function editName(req, res, next) {
   return false;
 }
 
+// exports fuctions to be called later in routes middleware
 module.exports = {
   createUser,
   getUserById,

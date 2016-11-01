@@ -106,6 +106,6 @@ Used to get get information popups appear on page when clicked
 
 In my initial purposal I wanted to be able to write text over my gifs and memes. The problem that I faced with that was that every time the page reloaded the text you had written went away. My solution was to use canvas to append text to the pictures, but when I did that the gifs would freeze, instead of play thier short videos. I ultimatly abandoned this plan and included a download feature so that the images could be saved to your computer with a click.
 
+## To View
 
-
-//code samples and explanations.
+https://procrastinator.herokuapp.com/

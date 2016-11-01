@@ -22,7 +22,7 @@ router.post('/', authenticate, searchMeme, searchGif, saveFavorite, (req, res) =
   });
 });
 // user pulls some of your user information
-// meme and gif pull apii info from thier respective locations
-// search, numb, and same used to keep track of page your on when you page scroll and save
+// meme and gif pull api info from thier respective locations
+// search, numb, and same used to keep track of info when you page scroll and save
 module.exports = router;
 // exports routers so all the pages can be linked
