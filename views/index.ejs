@@ -46,6 +46,7 @@
         <div class="left">
           <form class="login" action="/auth" method="post">
             <p>Login Into Your Account</p>
+            <h6><%= error %></h6>
             <input class="xc" type="text" name="user[username]" value="" placeholder="Username" required><br>
             <input class="xc" type="password" name="user[password]" value="" placeholder="Password" required><br>
             <input id="login" type="submit" name="name" value="Log in">

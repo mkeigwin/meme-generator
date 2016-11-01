@@ -4,7 +4,8 @@ const express = require('express');
 const indexRouter = express.Router();
 
 indexRouter.get('/', (req, res) => {
-  res.render('index');
+// pass the value error so that any bad username password combo doesn't exist
+  res.render('index', { error: null });
 });
 // Route that serves your '/' homepage, renders the index page
 

@@ -259,3 +259,10 @@ h5 {
   background: -ms-linear-gradient(top, #6eb6e6, #609cc4);
   background: -o-linear-gradient(top, #6eb6e6, #609cc4);
 }
+h6 {
+  color: red;
+  text-align: center;
+  font-size: 1vw;
+  max-width: 12vw;
+  margin-bottom: 1vh;
+}
